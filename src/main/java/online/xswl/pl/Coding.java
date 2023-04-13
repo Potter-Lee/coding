@@ -10,8 +10,8 @@ import online.xswl.pl.utils.ExceptionBarrier;
  */
 public class Coding extends ExceptionBarrier {
 
-    public static Setting setting() {
-        return Setting.instance;
+    public static Designer design() {
+        return Designer.instance;
     }
 
 }

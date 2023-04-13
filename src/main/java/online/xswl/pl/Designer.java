@@ -11,18 +11,18 @@ import org.slf4j.LoggerFactory;
  *
  * @author PL
  */
-public class Setting {
+public class Designer {
 
-    private Setting() {}
+    private Designer() {}
 
-    protected static final Setting instance = new Setting();
+    protected static final Designer instance = new Designer();
 
     private final Logger log = LoggerFactory.getLogger(ExceptionBarrier.class);
 
 
     private ExceptionLoggingConsumer exceptionLoggingConsumer = e -> log.warn("该异常已被Safer暂时忽略，请及时处理", e);
 
-    public Setting setExceptionLoggingConsumer(ExceptionLoggingConsumer exceptionLoggingConsumer) {
+    public Designer setExceptionLoggingConsumer(ExceptionLoggingConsumer exceptionLoggingConsumer) {
         assert exceptionLoggingConsumer != null;
         this.exceptionLoggingConsumer = exceptionLoggingConsumer;
         return this;
